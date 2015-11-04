@@ -21,7 +21,8 @@ hr {
 p
 { padding: 0 0 10px 0;
   line-height: 1.7em;
-  font-size: 100% 
+  font-size: 100% ;
+  text-indent: 20px;
   }
 
 img
@@ -263,7 +264,7 @@ ul#menu li.current a, ul#menu li:hover a
   height: 15px;
   margin-left: auto;
   margin-right: auto;
-  width: 90px;
+  width: 110px;
   padding: 5px 5px 10px 7px;
   background: #fff;
   background: -moz-linear-gradient(#fff, #ccc);
