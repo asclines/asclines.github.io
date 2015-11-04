@@ -12,6 +12,12 @@ body
   color: #212121; /* primary-text-color */
 }
 
+hr {
+	color: #B6B6B6; /* divider-color     */
+	
+	border-width: 1px;
+}
+
 p
 { padding: 0 0 10px 0;
   line-height: 1.7em;
