@@ -26,6 +26,15 @@ root: /
 permalink: :title/
 permalink_defaults:
 
+# Deploying to asclines.github.io
+deploy:
+  type: git
+  repo: git@github.com:asclines/asclines.github.io.git
+  branch: master
+  message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
+  name: asclines
+  email: injpk23@gmail.com
+
 # Directory
 source_dir: source
 public_dir: public
@@ -73,8 +82,3 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: asc-next
-
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type:
