@@ -5,15 +5,15 @@ tags:
   - HackerRank
   - Algorithms
   - Constructive
-categories:
-  - CPPE
+categories: 'CPPE'
 date: 2016-10-18 18:50:16
 ---
 
-
 # New Year Chaos
+Competitive Programing Problem Editorial
 ## Problem Statement
-This problem comes from [HackerRank](https://www.hackerrank.com/challenges/new-year-chaos)
+This problem comes from [HackerRank](https://www.hackerrank.com/challenges/new-year-chaos) and is classified as a Constructive Algorithm
+<!-- more -->
 
 ### Breakdown
 1. Suppose there is an ordered list of *N* elements numbered 1 to *N*.
@@ -30,7 +30,7 @@ This problem comes from [HackerRank](https://www.hackerrank.com/challenges/new-y
 2. Arrays by default are 0-based, however given the input constraints it will be easier if we just force all arrays to be 1-based. (This will make more sense after reading the Walk-Through)
 3. Essentially we are just trying to sort the input list
 
-<!-- more --> 
+
 # Solution
 [Source Code](https://github.com/asclines/CPPS/tree/master/HackerRank/Algorithms/ConstructiveAlgorithms/NewYearChaos)
 ## Algorithms and Data Structures
