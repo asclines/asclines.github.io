@@ -4,21 +4,6 @@ date: 2016-10-14 09:40:10
 ---
 
 <!-- toc -->
-
-# Purpose
-Initially, the reason why I made a personal website was to just simply get my name and resume online.
-But now, as time goes on, both this website and I have grown.
-## When a standard resume isn't enough
-This website is intended to go beyond what a simple, one page resume can do. Here you can find more information about me, extended details on the items that do appear on my resume as well as accomplishments, experiences, etc. that I have done yet did not make it to my resume. On this about page you not just find a link to my standard resume but you will find that this page acts as a more comprehensive resume, containing all those things that you might want to know about me but could not find a home on my standard resume.
-
-## Showcase of my work
-They say a picture is worth a thousand words. How many words is a project worth?
-In my Projects section, you will find a showcase of the projects I am most proud of. It's one thing to say I know a language, it's another to show that I know it and with this website, I aim to do both.
-
-## Competitive Programming Problem Editorials
-I really, really enjoy doing competitive programming problems and participating in online competitive programming contests on sites like [CodeForces](http://codeforces.com) and [TopCoder](https://www.topcoder.com). I have started recently to write up editorials of some problems I have solved and will be posting them in the blog section. For more information on that check out the [CPP Editorials Overview post](/CPP-Editorials-Overview). While the editorials are intended to help people get into competitive programming, I hope they also can serve as a showcase of my competitive programming skills.
-
-
 # Alexander Clines
 ## Who Am I?
 I am a student at Texas Tech University. My academic situation is crazy but long story short, I am finishing up a dual degree plan so in May 2017 I will receive a *Mathematics B.S.* and a *Computer Science B.S.* In addition, I have started part-time (with the intention of going full-time once my undergraduate work is done) working on a * Mathematics M.S. * where I am currently focused on *mathematical computing* and *biomathematics*.
