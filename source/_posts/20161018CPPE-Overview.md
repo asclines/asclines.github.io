@@ -5,6 +5,7 @@ categories:
 - CPPE
 tags:
 - CPPE
+- CategoryOverview
 ---
 
 # Competitive Programming Problems Editorials Introduction
@@ -26,7 +27,7 @@ So with that being said, at least once a week, I intend to write up an editorial
 Although I cannot guarantee my solution will be the best and odds are it won't be, I can promise that my solution will work.
 
 **The goal of these editorials is not to provide the absolute best solution, but rather to provide insight on to how I reached my solution.**
-<!-- more --> 
+<!-- more -->
 ## Target Audience
 
 My target audience is this; Someone who:
