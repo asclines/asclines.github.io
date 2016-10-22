@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-hexo generate
+hexo generate --draft
 hexo server -s -l
