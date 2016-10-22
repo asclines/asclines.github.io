@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Alexander, Clines" />
+  <meta name="keywords" content="CPPE," />
 
 
 
@@ -84,25 +84,19 @@
 
 
 
-<meta name="description" content="Welcome to my new site! Previously, I had my website built in WordPress, but I have recently decided to switch to Hexo!
-My goals for this site are simple:
-
-Let the world know who I am by expanding on">
+<meta name="description" content="Journey to the MoonCompetitive Programing Problem Editorial
+Problem StatementThis problem comes from HackerRank and is classified as a graph theory problem.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/hello-world/index.html">
+<meta property="og:title" content="CPPE Journey to the Moon">
+<meta property="og:url" content="http://yoursite.com/CPPE-Journey-to-the-Moon/index.html">
 <meta property="og:site_name" content="Alexander Clines">
-<meta property="og:description" content="Welcome to my new site! Previously, I had my website built in WordPress, but I have recently decided to switch to Hexo!
-My goals for this site are simple:
-
-Let the world know who I am by expanding on">
-<meta property="og:updated_time" content="2016-10-21T12:31:37.918Z">
+<meta property="og:description" content="Journey to the MoonCompetitive Programing Problem Editorial
+Problem StatementThis problem comes from HackerRank and is classified as a graph theory problem.">
+<meta property="og:updated_time" content="2016-10-22T22:04:13.366Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to my new site! Previously, I had my website built in WordPress, but I have recently decided to switch to Hexo!
-My goals for this site are simple:
-
-Let the world know who I am by expanding on">
+<meta name="twitter:title" content="CPPE Journey to the Moon">
+<meta name="twitter:description" content="Journey to the MoonCompetitive Programing Problem Editorial
+Problem StatementThis problem comes from HackerRank and is classified as a graph theory problem.">
 
 
 
@@ -123,10 +117,10 @@ Let the world know who I am by expanding on">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/CPPE-Journey-to-the-Moon/"/>
 
 
-  <title> Hello World | Alexander Clines </title>
+  <title> CPPE Journey to the Moon | Alexander Clines </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="en">
@@ -246,7 +240,7 @@ Let the world know who I am by expanding on">
             
             
               
-                Hello World
+                CPPE Journey to the Moon
               
             
           </h1>
@@ -258,11 +252,30 @@ Let the world know who I am by expanding on">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-21T07:31:37-05:00" content="2016-10-21">
-              2016-10-21
+            <time itemprop="dateCreated" datetime="2016-10-22T18:39:44-05:00" content="2016-10-22">
+              2016-10-22
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/CPPE/" itemprop="url" rel="index">
+                    <span itemprop="name">CPPE</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -286,16 +299,46 @@ Let the world know who I am by expanding on">
       
 
       
-        <p>Welcome to my new site! Previously, I had my website built in WordPress, but I have recently decided to switch to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>!</p>
-<p>My goals for this site are simple:</p>
-<ul>
-<li>Let the world know who I am by expanding on my resume and providing more information than can be provided on a 1-page resume.</li>
-<li>Have links all my other profiles: Check out the sidebar for that</li>
-<li>Host a blog for those various things I wish to share with the World</li>
-<li>Act as a showcase for my projects.</li>
+        <h1 id="journey-to-the-moon"><a href="#Journey-to-the-Moon" class="headerlink" title="Journey to the Moon"></a>Journey to the Moon <a href="#journey-to-the-moon" class="header-anchor"></a></h1><p>Competitive Programing Problem Editorial</p>
+<h2 id="problem-statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement <a href="#problem-statement" class="header-anchor"></a></h2><p>This problem comes from <a href="https://www.hackerrank.com/challenges/journey-to-the-moon" target="_blank" rel="external">HackerRank</a> and is classified as a graph theory problem.<br><a id="more"></a></p>
+<h3 id="breakdown"><a href="#Breakdown" class="headerlink" title="Breakdown"></a>Breakdown <a href="#breakdown" class="header-anchor"></a></h3><p>Since this is a graph theory, let&#x2019;s rename a few things in the problem to make it more graph-y.</p>
+<ol>
+<li>Let &#x2018;countries&#x2019; be &#x2018;graphs&#x2019;</li>
+<li>Let &#x2018;astronauts&#x2019; be &#x2018;nodes&#x2019;</li>
+<li>Let &#x2018;pairs&#x2019; be &#x2018;edges&#x2019;</li>
+</ol>
+<p>Now with that in mind, we can rewrite the problem to be:<br>Find how many pairs consisting of nodes from different graphs can be created.</p>
+<p>We can define disconnected graph $ DG  = {G_i, i = 1,\dots,M} $ where $ G_i $ is a connected graph.</p>
+<h3 id="initial-assumptions"><a href="#Initial-Assumptions" class="headerlink" title="Initial Assumptions"></a>Initial Assumptions <a href="#initial-assumptions" class="header-anchor"></a></h3><ol>
+<li>With the problem in terms of graph theory, we can imagine using an undirected graph to hold all the pairs.</li>
+<li>We can represent the undirected graph in terms of an adjacency list where we get the pairs from the input.</li>
+<li>If a node doesn&#x2019;t appear in the input pairs, we can assume it is the only node from that country</li>
+<li>To find how many pairs we just need to calculate <script type="math/tex">\sum_{i=0}^M \left( g_i * \sum_{i=0}^M g_j  \right)</script> where $ g_i $ is the number of nodes in $ G_i $</li>
+</ol>
+<h1 id="solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution <a href="#solution" class="header-anchor"></a></h1><p><a href="https://github.com/asclines/CPPS/tree/master/HackerRank/Algorithms/GraphTheory/Journey%20to%20the%20Moon" target="_blank" rel="external">Source Code</a></p>
+<h2 id="algorithms-and-data-structures"><a href="#Algorithms-and-Data-Structures" class="headerlink" title="Algorithms and Data Structures"></a>Algorithms and Data Structures <a href="#algorithms-and-data-structures" class="header-anchor"></a></h2><h3 id="data-structures-used"><a href="#Data-Structures-Used" class="headerlink" title="Data Structures Used"></a>Data Structures Used <a href="#data-structures-used" class="header-anchor"></a></h3><ul>
+<li><a href="http://www.geeksforgeeks.org/graph-and-its-representations/#attachment_27189" target="_blank" rel="external">Adjacency List</a> (Implemented with a vector of vectors in this solution)</li>
+<li><a href="http://www.cplusplus.com/reference/vector/vector/" target="_blank" rel="external">Vector</a></li>
 </ul>
-<p>I hope I can accomplish this.</p>
-<p>Alexander Clines</p>
+<h3 id="algorithms-used"><a href="#Algorithms-Used" class="headerlink" title="Algorithms Used"></a>Algorithms Used <a href="#algorithms-used" class="header-anchor"></a></h3><p>The solution uses a modified <a href="https://www.topcoder.com/community/data-science/data-science-tutorials/introduction-to-graphs-and-their-data-structures-section-2/#breadth" target="_blank" rel="external">Breadth First Search (BFS)</a> algorithm as part of its algorithm.</p>
+<h3 id="solution-algorithm"><a href="#Solution-Algorithm" class="headerlink" title="Solution Algorithm"></a>Solution Algorithm <a href="#solution-algorithm" class="header-anchor"></a></h3><ol>
+<li>Given numbers $N,I$</li>
+<li>Let $L$ be a list of size $ N$ where each element in $ L $ is an empty list. <em>This will be our adjacency list.</em></li>
+<li>For each input pair $a,b$:<br> 3.1. Add $b$ to $L[a]$ (a.k.a. $L_a = b$)<br> 3.2. Add $a$ to $L[b]$ (a.k.a. $L_b = a$)</li>
+<li>Let $V$ be a list of size $N$ of type boolean where every element in $V$ is initialized to false. <em>This will be how we keep track of visited.</em></li>
+<li>Let $C$ be an empty list where the size of $C$ is the number of disconnected graphs and each element in $C$ is the number of nodes in the disconnected graph. (a.k.a. $\forall i \in {1,&#x2026;,|C|}, C_i =$ how many nodes are in the disconnected graph $i$)</li>
+<li><p>For $n \in N$: <em>For each node</em><br> 6.1 If node $n$ has <strong>not</strong> been visited ( a.k.a. if $ V_n $ = false)  </p>
+<p> 6.1.1 Let $ c = 1 $. <em>$ c $ is for count</em><br>6.1.2 Let $F$ be a list of node $n$&#x2019;s neighbors. <em>$F $ is for frontier</em><br>6.2.3 Let $G$ be an empty list. <em>$ G $ is the next frontier</em><br>6.2.4 While $F$ is <strong>not</strong> empty:<br> 6.2.4.1 For $e$ in $F$:<br> 6.2.4.1.1 If node $e$ has <strong>not</strong> been visited ( a.k.a. if $V_e = false$):<br> 6.2.4.1.1 $c = c + 1$<br> 6.2.4.1.2 Add all non-visited neighbors of $e$ to $G$<br> 6.2.4.2 Set $F = G$<br> 6.2.5 Add $c$ to $C$</p>
+</li>
+<li>Let $r = 0 $ <em>$r$ is for result</em></li>
+<li>Let $s = \sum_{i=0}^{|C|} C_i$</li>
+<li>Result is <script type="math/tex">\sum_{i=0}^{|C|} C_i * S'_i</script> where <script type="math/tex">S'_0 = s</script> and <script type="math/tex">S'_i = S_{i-1}-C_i \forall i \in \{1,...|C|\}</script></li>
+</ol>
+<h2 id="complexity-performance"><a href="#Complexity-amp-Performance" class="headerlink" title="Complexity &amp; Performance"></a>Complexity &amp; Performance <a href="#complexity-performance" class="header-anchor"></a></h2><p>The time-complexity for the solution is $O(N)$  and the performance was fast enough that HackerRank reported 0&#x2019;s on all test cases.</p>
+<h1 id="final-thoughts-and-conclusion"><a href="#Final-Thoughts-and-Conclusion" class="headerlink" title="Final Thoughts and Conclusion"></a>Final Thoughts and Conclusion <a href="#final-thoughts-and-conclusion" class="header-anchor"></a></h1><ul>
+<li>Note how in my initial assumptions I had a double summation formula for calculating the result. That resulted in having an $O(n^2)$ time-complexity as opposed to the $O(n)$ solution I ended up using.</li>
+<li>Also there is a way to solve this problem using <a href="http://www.geeksforgeeks.org/union-find/" target="_blank" rel="external">Union Find</a> which could result in the same time-complexity. But since this problem was labeled as a graph problem, that is the route I chose to take.</li>
+</ul>
 
       
     </div>
@@ -316,22 +359,24 @@ Let the world know who I am by expanding on">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/CPPE/" rel="tag">#CPPE</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CPPE-New-Year-Chaos/" rel="next" title="CPPE New Year Chaos">
-                <i class="fa fa-chevron-left"></i> CPPE New Year Chaos
+              <a href="/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/CPPE-Journey-to-the-Moon/" rel="prev" title="CPPE Journey to the Moon">
-                CPPE Journey to the Moon <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -483,7 +528,7 @@ Let the world know who I am by expanding on">
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#journey-to-the-moon"><span class="nav-number">1.</span> <span class="nav-text">Journey to the Moon </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#problem-statement"><span class="nav-number">1.1.</span> <span class="nav-text">Problem Statement </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#breakdown"><span class="nav-number">1.1.1.</span> <span class="nav-text">Breakdown </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#initial-assumptions"><span class="nav-number">1.1.2.</span> <span class="nav-text">Initial Assumptions </span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#solution"><span class="nav-number">2.</span> <span class="nav-text">Solution </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#algorithms-and-data-structures"><span class="nav-number">2.1.</span> <span class="nav-text">Algorithms and Data Structures </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#data-structures-used"><span class="nav-number">2.1.1.</span> <span class="nav-text">Data Structures Used </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#algorithms-used"><span class="nav-number">2.1.2.</span> <span class="nav-text">Algorithms Used </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#solution-algorithm"><span class="nav-number">2.1.3.</span> <span class="nav-text">Solution Algorithm </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#complexity-performance"><span class="nav-number">2.2.</span> <span class="nav-text">Complexity & Performance </span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#final-thoughts-and-conclusion"><span class="nav-number">3.</span> <span class="nav-text">Final Thoughts and Conclusion </span></a></li></ol></div>
             
           </div>
         </section>
