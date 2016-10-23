@@ -1,5 +1,6 @@
 ---
 title: Hello World
+date: 2016-10-17 18:39:44
 ---
 
 Welcome to my new site! Previously, I had my website built in WordPress, but I have recently decided to switch to [Hexo](https://hexo.io/)!
