@@ -84,15 +84,22 @@
 
 
 
-<meta name="description" content="Personal website, portfolio and blog for Alexander Clines">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Alexander Clines">
-<meta property="og:url" content="http://yoursite.com/tags/CategoryOverview/index.html">
+<meta name="description" content="TODO: Below is copy-pasta from wordpress.
+This post will explain how to install CUDA Toolkit 7.5 on Ubuntu 15.10. I have personally done this on my Lenovo Y50 Laptop with a NVIDIA GTX 860M.
+Before we">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HT-Cuda_7_5_Ubuntu_15_10">
+<meta property="og:url" content="http://yoursite.com/HT-Cuda-7-5-Ubuntu-15-10/index.html">
 <meta property="og:site_name" content="Alexander Clines">
-<meta property="og:description" content="Personal website, portfolio and blog for Alexander Clines">
+<meta property="og:description" content="TODO: Below is copy-pasta from wordpress.
+This post will explain how to install CUDA Toolkit 7.5 on Ubuntu 15.10. I have personally done this on my Lenovo Y50 Laptop with a NVIDIA GTX 860M.
+Before we">
+<meta property="og:updated_time" content="2016-11-15T12:57:54.689Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Alexander Clines">
-<meta name="twitter:description" content="Personal website, portfolio and blog for Alexander Clines">
+<meta name="twitter:title" content="HT-Cuda_7_5_Ubuntu_15_10">
+<meta name="twitter:description" content="TODO: Below is copy-pasta from wordpress.
+This post will explain how to install CUDA Toolkit 7.5 on Ubuntu 15.10. I have personally done this on my Lenovo Y50 Laptop with a NVIDIA GTX 860M.
+Before we">
 
 
 
@@ -113,10 +120,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/CategoryOverview/"/>
+  <link rel="canonical" href="http://yoursite.com/HT-Cuda-7-5-Ubuntu-15-10/"/>
 
 
-  <title> Tag: CategoryOverview | Alexander Clines </title>
+  <title> HT-Cuda_7_5_Ubuntu_15_10 | Alexander Clines </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="en">
@@ -137,7 +144,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -225,46 +232,134 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        CategoryOverview
-        <small>Tag</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HT-Cuda_7_5_Ubuntu_15_10
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-11-15T06:57:54-06:00" content="2016-11-15">
+              2016-11-15
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
+      
+        <p>TODO: Below is copy-pasta from wordpress.</p>
+<p>This post will explain how to install CUDA Toolkit 7.5 on Ubuntu 15.10. I have personally done this on my Lenovo Y50 Laptop with a NVIDIA GTX 860M.</p>
+<p>Before we begin, make sure you system has a CUDA-Enabled NVIDIA card as listed on this site.</p>
+<p>Download and Install .deb</p>
+<p>Go to the download page and follow the prompts to download the .deb for your machine.<br>I recommend verifying your download using the checksum tool of your choice before continuing.<br>To install:</p>
+<p>[bash]sudo dpkg -i cuda-repo-ubuntu1504-7-5-local_7.5-18_amd64.deb<br>sudo apt-get update<br>sudo apt-get install cuda<br>[/bash]<br>Add Path Variables</p>
+<p>In either your ~/.bashrc (or if you want every user on your machine, /etc/profile) add these two lines:</p>
+<p>[code] export PATH=/usr/local/cuda-7.5/bin/:$PATH<br>export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH[/code]<br>To verify this and the installation worked enter:</p>
+<p>[bash] nvcc &#x2014;version[/bash]<br>Compilers</p>
+<p>So at this point you are technically done installing CUDA-toolkit 7.5 and if you like go ahead and try to run some CUDA code.<br>However, at the time of this writing, if you were to try and compile a CUDA program you would get this error:</p>
+<p>[code]error &#x2014; unsupported GNU version! gcc versions later than 4.9 are not supported![/code]<br>If you have a GCC compiler version higher than 4.9, which you can check by entering:</p>
+<p>[bash]gcc &#x2014;version[/bash]<br>you will have to install a lower version gcc.<br>Now, what if you are like me and you don&#x2019;t want to downgrade your gcc compiler for the whole system? Do what I did and install gcc and g++ 4.9 for CUDA 7.5 by entering these commands: (I believe g++ is optional, but I chose to do it to be safe)</p>
+<p>[bash]sudo apt-get install gcc-4.9<br>sudo apt-get install g++-4.9<br>sudo ln -s /usr/bin/gcc-4.9 /usr/local/cuda/bin/gcc<br>sudo ln -s /usr/bin/g++-4.9 /usr/local/cuda/bin/g++[/bash]<br>In Conclusion</p>
+<p>By now, hopefully everything works and you will now be able to use the commands:</p>
+<p>[bash]nvcc<br>cuda-gdb[/bash]<br>If not, go ahead and post in the comments your problem and let&#x2019;s see if we can&#x2019;t fix your problem and help anyone in the future who may come across that problem.</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/CPPE-Overview/" itemprop="url">
-              
-                <span itemprop="name">CPPE-Overview</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-18T18:39:44-05:00"
-              content="2016-10-18" >
-          10-18
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CPPE-Journey-to-the-Moon/" rel="next" title="CPPE Journey to the Moon">
+                <i class="fa fa-chevron-left"></i> CPPE Journey to the Moon
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/BumbleBeeBlunder/" rel="prev" title="BumbleBeeBlunder">
+                BumbleBeeBlunder <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -272,6 +367,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -291,8 +390,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/me.jpg"
@@ -303,7 +411,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -380,6 +488,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -476,6 +595,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 

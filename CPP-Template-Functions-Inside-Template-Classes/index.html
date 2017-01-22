@@ -84,15 +84,19 @@
 
 
 
-<meta name="description" content="Personal website, portfolio and blog for Alexander Clines">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Alexander Clines">
-<meta property="og:url" content="http://yoursite.com/tags/CategoryOverview/index.html">
+<meta name="description" content="TODO: Below is copy-pasta from wordpress.
+Let&amp;#x2019;s say you have a templated class, and inside that class you have a member function that requires additional template parameters. Well here is how I">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CPP Template Functions Inside Template Classes">
+<meta property="og:url" content="http://yoursite.com/CPP-Template-Functions-Inside-Template-Classes/index.html">
 <meta property="og:site_name" content="Alexander Clines">
-<meta property="og:description" content="Personal website, portfolio and blog for Alexander Clines">
+<meta property="og:description" content="TODO: Below is copy-pasta from wordpress.
+Let&amp;#x2019;s say you have a templated class, and inside that class you have a member function that requires additional template parameters. Well here is how I">
+<meta property="og:updated_time" content="2016-11-15T12:59:51.247Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Alexander Clines">
-<meta name="twitter:description" content="Personal website, portfolio and blog for Alexander Clines">
+<meta name="twitter:title" content="CPP Template Functions Inside Template Classes">
+<meta name="twitter:description" content="TODO: Below is copy-pasta from wordpress.
+Let&amp;#x2019;s say you have a templated class, and inside that class you have a member function that requires additional template parameters. Well here is how I">
 
 
 
@@ -113,10 +117,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/CategoryOverview/"/>
+  <link rel="canonical" href="http://yoursite.com/CPP-Template-Functions-Inside-Template-Classes/"/>
 
 
-  <title> Tag: CategoryOverview | Alexander Clines </title>
+  <title> CPP Template Functions Inside Template Classes | Alexander Clines </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="en">
@@ -137,7 +141,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -225,46 +229,143 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        CategoryOverview
-        <small>Tag</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CPP Template Functions Inside Template Classes
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-11-15T06:59:51-06:00" content="2016-11-15">
+              2016-11-15
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
+      
+        <p>TODO: Below is copy-pasta from wordpress.</p>
+<p>Let&#x2019;s say you have a templated class, and inside that class you have a member function that requires additional template parameters. Well here is how I handle that.</p>
+<p>So recently I have been working on a project that requires heavy C++ Template Meta Programming. While working on this project, I have come across the need to have template functions with their own templates inside of templated classes and I could not find a solid guide on how to do this on the internet. With that in mind, I have decided to compile what I have learned from digging around and experimenting into a post so that others may have an easier time learning this.</p>
+<p>Situation</p>
+<p>Let&#x2019;s say you have a class like this:</p>
+<p>[cpp]<br>template<typename t=""><br>class SomeClass{<br>public:</typename></p>
+<pre><code> void Foo(T a, int b);
 
-      <h1 class="post-title">
+ void Bar(T a, char b);
+</code></pre><p>};<br>[/cpp]<br>But perhaps you want Foo to take on additional template that Bar does not need.</p>
+<p>Solution</p>
+<p>Instead of adding it to the class templates, forcing an unnecessary type declaration when using Bar, you can add a template type parameter to Foo, in the same way you would normally template a function.</p>
+<p>[cpp]<br>template<typename t=""><br>class SomeClass{<br>public:</typename></p>
+<pre><code> template&lt;typename S&gt;
+ void Foo(T a, S b);
+
+ void Bar(T a, char b); //Bar doesn&apos;t need type S
+</code></pre><p>};<br>[/cpp]<br>Now to actually define a templated function in a templated class, it would look like this:</p>
+<p>[cpp]<br>template<typename t=""> //From class declaration<br>template<typename s=""> //From function declaration<br>void SomeClass<t>::Foo(T a, S b){<br>        //Method stuff here&#x2026;<br>}</t></typename></typename></p>
+<p>template<typename t=""><br>void SomeClass<t>::Bar(T a, char b){<br>        //Method stuff here&#x2026;<br>}<br>[/cpp]<br>Note the location of the template type declarations.</t></typename></p>
+<p>Now, to actually use these functions, one way to do it is as so:</p>
+<p>[cpp]<br>        SomeClass<int> obj; //int is type T</int></p>
+<pre><code>    obj.Foo&lt;char&gt;(5,&apos;A&apos;); //char is type S
+</code></pre><p>[/cpp]<br>And there we have it, a simple way to show how to declare/define templated functions inside templated classes.</p>
+
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/CPPE-Overview/" itemprop="url">
-              
-                <span itemprop="name">CPPE-Overview</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-18T18:39:44-05:00"
-              content="2016-10-18" >
-          10-18
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/BumbleBeeBlunder/" rel="next" title="BumbleBeeBlunder">
+                <i class="fa fa-chevron-left"></i> BumbleBeeBlunder
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/My-Atom-Packages/" rel="prev" title="My Atom Packages">
+                My Atom Packages <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -272,6 +373,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -291,8 +396,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/me.jpg"
@@ -303,7 +417,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -380,6 +494,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -476,6 +601,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
