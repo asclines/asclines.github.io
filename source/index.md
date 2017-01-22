@@ -1,6 +1,8 @@
 # Welcome!
 
 My name is Alexander Clines and I am currently attending Texas Tech University where I am completing a dual degree program in Computer Science, B.S. and Mathematics, B.S. In addition to that, I am starting on a degree in Mathematics, M.S.  
+However, the degree is about to be put on hold as this summer (July 17th to be exact) I will be starting work at Google! I intend to finish graduate school, but I could not pass up an opportunity to work for Google.
+
 My goal in life, and more specifically my future career, is to find a way to apply my various skills in ways that actually make a difference in the world.  This goal is not for fame or riches, but rather to contribute to the greater effort of pushing humanity forward and stretching the limits of technology in a meaningful way.  
 
 # This site
