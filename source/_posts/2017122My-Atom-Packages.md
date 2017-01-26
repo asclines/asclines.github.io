@@ -17,6 +17,13 @@ I use this plugin to bring conformity/consistency to my code as I write. With a 
 - JavaScript
 - Python
 
+## [package-switch](https://atom.io/packages/package-switch)
+> Easy package activation/deactivation
+
+Once you start having several packages running on Atom, startup time can get a little slow.
+This package allows me to customize what packages I have running when a certain project is open.
+After I installed this package and set it up, I immediately began noticing quicker start up times.
+
 ## [git-time-machine](https://atom.io/packages/git-time-machine)
 > Visually interact with git commit history for a file
 
@@ -64,6 +71,12 @@ This package is required as a base for the linters that are langauge specific.
 # Web Development
 _Whether it's a website or webapp, these plugins many be useful._
 
+## [atom-minify](https://atom.io/packages/atom-minify)
+> Minifies JS and CSS files, optionally on save.
+
+Great way to quickly minify my JS and CSS files for websites I work on.
+Gotta keep that load time down!
+
 ## [atom-polymer](https://atom.io/packages/atom-polymer)
 > Develop for Polymer 1.0+ faster with Atom.
 
@@ -99,4 +112,4 @@ _ I write a lot in Latex, whether its for a paper or a presentation, these plugi
 > Adds LaTex autocompletion for Atom.io
 
 
-Hopefully this helps! I'll update this list as I add/remove packages. 
+Hopefully this helps! I'll update this list as I add/remove packages.
