@@ -175,9 +175,9 @@ html, body {
 .mdl-demo .mdl-card .mdl-card__supporting-text > h3:first-child {
   margin-bottom: 24px;
 }
-.mdl-demo .mdl-layout__tab-panel:not(#overview) {
+/*.mdl-demo .mdl-layout__tab-panel:not(#overview) {
   background-color: white;
-}
+}*/
 .mdl-demo #features section {
   margin-bottom: 72px;
 }
@@ -205,4 +205,66 @@ html, body {
 }
 .mdl-demo .mdl-menu__container {
   z-index: 99;
+}
+
+/*
+  Personal Styles
+*/
+//
+// Social Sharing Buttons for Material Design Lite
+// by Brandon Himpfen http://www.himpfen.com/
+// --------------------------------------------------
+
+$facebook: #3b5998;
+$googleplus: #e93f2e;
+$linkedin: #0e76a8;
+$github: #333;
+
+$md-colour-list: (
+facebook $facebook,
+googleplus $googleplus,
+linkedin $linkedin,
+github $github
+email $email
+);
+
+@each $colour-name, $md-colour in $md-colour-list {
+  .mdl-button.mdl-button--#{$colour-name} {
+      color: rgb(63, 81, 181)
+  }
+  .mdl-button.mdl-button--#{$colour-name}:focus:not(:active) {
+      background-color: $md-colour
+  }
+  .mdl-button--raised.mdl-button--#{$colour-name} {
+      background: $md-colour;
+      color: rgb(255, 255, 255)
+  }
+  .mdl-button--raised.mdl-button--#{$colour-name}:hover {
+      background-color: $md-colour
+  }
+  .mdl-button--raised.mdl-button--#{$colour-name}:active {
+      background-color: $md-colour
+  }
+  .mdl-button--raised.mdl-button--#{$colour-name}:focus:not(:active) {
+      background-color: $md-colour
+  }
+  .mdl-button--raised.mdl-button--#{$colour-name} .mdl-ripple {
+      background: rgb(255, 255, 255)
+  }
+  .mdl-button--fab.mdl-button--#{$colour-name} {
+      background: $md-colour;
+      color: rgb(255, 255, 255)
+  }
+  .mdl-button--fab.mdl-button--#{$colour-name}:hover {
+      background-color: $md-colour
+  }
+  .mdl-button--fab.mdl-button--#{$colour-name}:focus:not(:active) {
+      background-color: $md-colour
+  }
+  .mdl-button--fab.mdl-button--#{$colour-name}:active {
+      background-color: $md-colour
+  }
+  .mdl-button--fab.mdl-button--#{$colour-name} .mdl-ripple {
+      background: rgb(255, 255, 255)
+  }
 }
