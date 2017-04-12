@@ -1,0 +1,5 @@
+.contact-card-profile > .mdl-card__title {
+  color: #fff;
+  height: 200px;
+  background: url('../images/profile.jpg') center / cover;
+}

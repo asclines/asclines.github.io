@@ -1,3 +1,6 @@
+.social-button {
+  width: 90%;
+}
 .mdl-button.mdl-button--facebook {
   color: #3f51b5;
 }
@@ -195,5 +198,60 @@
 }
 
 .mdl-button--fab.mdl-button--github .mdl-ripple {
+  background: white;
+}
+
+/**
+SO
+**/
+
+
+.mdl-button.mdl-button--stackoverflow {
+  color: #3f51b5;
+}
+
+.mdl-button.mdl-button--stackoverflow:focus:not(:active) {
+  background-color: #bcbbbb;
+}
+
+.mdl-button--raised.mdl-button--stackoverflow {
+  background: #bcbbbb;
+  color: white;
+}
+
+.mdl-button--raised.mdl-button--stackoverflow:hover {
+  background-color: #bcbbbb;
+}
+
+.mdl-button--raised.mdl-button--stackoverflow:active {
+  background-color: #bcbbbb;
+}
+
+.mdl-button--raised.mdl-button--stackoverflow:focus:not(:active) {
+  background-color: #bcbbbb;
+}
+
+.mdl-button--raised.mdl-button--stackoverflow .mdl-ripple {
+  background: white;
+}
+
+.mdl-button--fab.mdl-button--stackoverflow {
+  background: #bcbbbb;
+  color: #f48024;
+}
+
+.mdl-button--fab.mdl-button--stackoverflow:hover {
+  background-color: #bcbbbb;
+}
+
+.mdl-button--fab.mdl-button--stackoverflow:focus:not(:active) {
+  background-color: #bcbbbb;
+}
+
+.mdl-button--fab.mdl-button--stackoverflow:active {
+  background-color: #bcbbbb;
+}
+
+.mdl-button--fab.mdl-button--stackoverflow .mdl-ripple {
   background: white;
 }
