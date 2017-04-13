@@ -33,14 +33,13 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/social.css">
-    <!-- <link rel="stylesheet" href="css/contact.css" /> -->
+    <link rel="stylesheet" href="css/projects.css" />
   </head>
 
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header id="header" class="mdl-layout__header mdl-layout__header--scroll ">
-        <div id="header-layer" style="background-color:rgba(96, 125, 139, 0.7);">
-
+        <div id="header-layer">
 
           <div class="mdl-layout--large-screen-only mdl-layout__header-row">
           </div>
@@ -61,6 +60,7 @@
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="background-color:rgba(69,90,100, 0.5);">
           <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
           <a href="#about" class="mdl-layout__tab">About</a>
+          <a href="#projects" class="mdl-layout__tab">Projects</a>
           <a href="#contact" class="mdl-layout__tab">Contact</a>
         </div>
 
@@ -111,6 +111,12 @@
           <div id="about-page"></div>
           <script>
             $("#about-page").load("html/about.html")
+          </script>
+        </div>
+        <div class="mdl-layout__tab-panel" id="projects">
+          <div id="projects-page"></div>
+          <script>
+            $("#projects-page").load("html/projects.html")
           </script>
         </div>
         <div class="mdl-layout__tab-panel" id="contact">

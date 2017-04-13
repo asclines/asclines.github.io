@@ -242,8 +242,12 @@ html, body {
 
 
 #header {
-  background-image: url(images/lake.jpg);
+  background-image: url(../images/lake.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
+}
+
+#header-layer {
+  background-color:rgba(96, 125, 139, 0.7);
 }
