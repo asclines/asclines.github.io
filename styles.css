@@ -239,3 +239,11 @@ html, body {
   margin-bottom: 40px;
   z-index: 900;
 }
+
+
+#header {
+  background-image: url(images/lake.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
