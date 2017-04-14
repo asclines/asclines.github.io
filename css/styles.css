@@ -251,3 +251,11 @@ html, body {
 #header-layer {
   background-color:rgba(96, 125, 139, 0.7);
 }
+
+.circular--square {
+  border-radius: 50%;
+  max-height: 100px;
+  margin-left:auto;
+  margin-right:10px;
+  float:left;
+}
