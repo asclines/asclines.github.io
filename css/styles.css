@@ -203,3 +203,12 @@ section.section--center .section__text:not(:last-child) {
     width: calc(100% - 80px);
     color: inherit;
 }
+
+.mdl-menu__outline {
+    background: transparent!important;
+    box-shadow: initial!important;
+}
+
+.mdl-menu__container {
+      padding: 50px!important;
+}
