@@ -192,3 +192,14 @@ section.section--center .section__text:not(:last-child) {
     overflow: hidden;
     margin: 0;
 }
+
+.card-supporting-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 0;
+    flex-grow: 1;
+    width: calc(100% - 80px);
+    color: inherit;
+}
