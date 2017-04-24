@@ -1,29 +1,35 @@
-.education-container {
+
+.info-container {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row;
     flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
 }
 
-.education-school {
+.info-container > div:last-child {
+  flex: 0 1 100%;
+}
+.info-title {
     -webkit-align-self: flex-start;
     align-self: flex-start;
     font-weight: bold;
-        padding-right: 10px;
+    padding-right: 10px;
 }
 
-.education-location {
+.info-middle {
     /*margin-left: auto;*/
 }
 
-.education-degree {
+.info-right {
+  margin-left: auto;
+  font-style: italic;
+}
+
+.info-sub {
     -webkit-align-self: flex-start;
     align-self: flex-start;
     padding-left: 5%;
     padding-top: 1%;
-}
-
-.education-graduation {
-  margin-left: auto;
-  font-style: italic;
 }
