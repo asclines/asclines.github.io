@@ -9,6 +9,7 @@
 
 .skills-title {
   font-weight: bold;
+  font-style: normal!important;
 }
 
 .skills-category {
@@ -23,6 +24,7 @@
   align-self: flex-end;
   flex: 0 1 50%;
   padding-bottom: 2%;
+  font-style: italic;
 }
 
 
