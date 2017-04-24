@@ -1,0 +1,29 @@
+.education-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.education-school {
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+    font-weight: bold;
+        padding-right: 10px;
+}
+
+.education-location {
+    /*margin-left: auto;*/
+}
+
+.education-degree {
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+    padding-left: 5%;
+    padding-top: 1%;
+}
+
+.education-graduation {
+  margin-left: auto;
+  font-style: italic;
+}
