@@ -1,0 +1,64 @@
+.skills-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.skills-title {
+  font-weight: bold;
+  font-style: normal!important;
+}
+
+.skills-category {
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+  flex: 0 1 50%;
+  padding-bottom: 2%;
+}
+
+.skills-list {
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+  flex: 0 1 50%;
+  padding-bottom: 2%;
+  font-style: italic;
+}
+
+
+.info-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.info-container > div:last-child {
+  flex: 0 1 100%;
+}
+.info-title {
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.info-middle {
+    /*margin-left: auto;*/
+}
+
+.info-right {
+  margin-left: auto;
+  font-style: italic;
+}
+
+.info-sub {
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+    padding-left: 5%;
+    padding-top: 1%;
+}

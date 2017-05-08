@@ -1,0 +1,61 @@
+/*
+  General Card Styling
+*/
+
+.mdl-card {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.mdl-card>* {
+    height: auto;
+}
+
+.mdl-card .mdl-card__supporting-text {
+    margin: 40px;
+    flex-grow: 1;
+    padding: 0;
+    color: inherit;
+    width: calc(100% - 80px);
+}
+
+.mdl-card__supporting-text h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.mdl-card__actions {
+    margin: 0;
+    padding: 4px 40px;
+    color: inherit;
+}
+
+.mdl-card__actions a {
+    color: #00BCD4;
+    margin: 0;
+}
+
+.mdl-card__actions a:hover, .mdl-card__actions a:active {
+    color: inherit;
+    background-color: transparent;
+}
+
+.mdl-card__supporting-text+.mdl-card__actions {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+
+.mdl-card .mdl-card__supporting-text>h3:first-child {
+    margin-bottom: 24px;
+}
+
+
+/*
+  Project Page Specific
+*/
+
+img.project-card {
+  width: 100%;
+  height: 100%;
+}
